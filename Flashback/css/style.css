@@ -1,0 +1,599 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body {
+    margin: 0
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline
+}
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+[hidden],
+template {
+    display: none
+}
+a {
+    background-color: transparent
+}
+a:active,
+a:hover {
+    outline: 0
+}
+abbr[title] {
+    border-bottom: 1px dotted
+}
+b,
+strong {
+    font-weight: bold
+}
+dfn {
+    font-style: italic
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+mark {
+    background: #ff0;
+    color: #000
+}
+small {
+    font-size: 80%
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+sup {
+    top: -0.5em
+}
+sub {
+    bottom: -0.25em
+}
+img {
+    border: 0
+}
+svg:not(:root) {
+    overflow: hidden
+}
+figure {
+    margin: 1em 40px
+}
+hr {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+pre {
+    overflow: auto
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    /*color: inherit;*/
+    font: inherit;
+    margin: 0
+}
+button {
+    overflow: visible
+}
+button,
+select {
+    text-transform: none
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+input {
+    line-height: normal
+}
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em
+}
+legend {
+    border: 0;
+    padding: 0
+}
+textarea {
+    overflow: auto
+}
+optgroup {
+    font-weight: bold
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+td,
+th {
+    padding: 0
+}
+#gallery {
+    padding: 6px;
+    overflow: hidden;
+}
+.image {
+    position: relative;
+    float: left;
+    margin: 2px;
+}
+.cd-header {
+    opacity: 0.7;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.cd-main-nav {
+    width: auto;
+    height: auto;
+    background: none;
+    cursor: auto;
+    font-family: Bradley Hand ITC;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+}
+.cd-main-nav ul {
+    position: static;
+    width: auto;
+	margin: 14px 20px;
+}
+.cd-main-nav li {
+    display: inline-block;
+    margin-left: 1em;
+}
+.cd-main-nav a {
+    display: inline-block;
+    height: auto;
+    line-height: normal;
+    background: transparent;
+    padding: .6em 1em;
+    border-top: none;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 0.875rem;
+	text-decoration: none;
+}
+.md-close{
+    border: none;
+    padding: 0.6em 1.2em;
+    background: #c0392b;
+    color: #fff;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+}
+#mainMenu {
+    background: rgba(255, 255, 255, 0.95);
+    width: auto;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+	font-size: 14px;
+	border: 2px solid #e74c3c;
+	display: none;
+	border-radius: 0px 4px 4px 0px;
+}
+#mainMenu ul{
+	margin: 0;
+	padding: 4px 0px;
+	list-style-type: none;
+}
+#mainMenu li{
+	padding: 5px 13px 5px 13px;
+	color:#e74c3c;
+}
+#mainMenu li:hover{
+	background-color:#e74c3c;
+	color:white;
+}
+a{
+	text-decoration: none;
+}
+#ham{
+	height: 60px;
+	position: absolute;
+}
+#home{
+	background: url("../img/home.jpg") no-repeat center center fixed;
+	background-size: cover;
+	position: fixed;
+  	top: 0;
+  	left: 0;
+	width: 100%;
+  	height: 100%;
+}
+#home h1{
+    font-size: 48px;
+    font-weight: 300;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	position: absolute;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: white;
+	width: 90%;
+    max-width: 1170px;
+    text-align: center;
+}
+/*.searchInput{
+	width:400px;
+	border-radius: 5px;
+	border: 2px solid #e74c3c;
+	height: 30px;
+	color:#e74c3c;
+	padding-left: 11px;
+}*/
+.searchInput {
+    width: 500px;
+    border-radius: 5px;
+    border: 0px;
+    height: 40px;
+    color: #e74c3c;
+    padding-left: 11px;
+	border: 1px solid #e74c3c;
+}
+.searchInput:focus{
+	outline:0px !important;
+}
+/*.search{
+	width: 400px;
+	margin: 12px auto;
+}*/
+.search {
+    width: 500px;
+    margin: 345px auto;
+}
+/*.searchIcon{
+	margin-top: -28px;
+    margin-left: 383px;
+}*/
+.searchIcon {
+    margin-top: -32px;
+    margin-left: 479px;
+}
+.ui-autocomplete{
+	opacity: 0.8;
+}
+.ui-state-hover{
+	color:#e74c3c !important;
+}
+.ui-widget-content a {
+    color: #e74c3c !important;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+.albumName{
+	width: 100%;
+    height: 35px;
+    border: 2px solid #c0392b;
+	box-sizing: border-box;
+    padding: 6px 13px;
+}
+.gap{
+	height:15px;
+}
+input{
+	color: initial !important;
+	font-family: 'Lato', Calibri, Arial, sans-serif !important;
+	outline:0px !important;
+	color:#e74c3c !important;
+}
+.buttons{
+	text-align: right;
+}
+#createAlbum{
+	border: none;
+    padding: 0.6em 1.2em;
+    background: #c0392b;
+    color: #fff;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+}
+#storeImage{
+	border: none;
+    padding: 0.6em 1.2em;
+    background: #c0392b;
+    color: #fff;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+	display: inline;
+}
+.md-close,
+#createAlbum{
+	display: inline !important;
+}
+.show{
+	background-color: #ffa00a;
+    width: auto;
+    color: white;
+    box-sizing: border-box;
+    padding: 18px 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+	border: 6px solid #d78300;
+	display: none;
+}
+.cross{
+	color:white;
+	float: right;
+	margin-right: -13px;
+	cursor: pointer;
+}
+.modalMsg{
+	position: absolute;
+	display: none;
+}
+.albumDropdown{
+	width: 100%;
+	height: 35px;
+	border: 2px solid #c0392b;
+	color:#e74c3c;
+}
+select:focus{
+    outline: 0 !important;
+}
+::-webkit-input-placeholder {
+   color: #e74c3c;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #e74c3c;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #e74c3c;  
+}
+:-ms-input-placeholder {  
+   color: #e74c3c;  
+}
+.downloadDiv{
+	border: 3px solid white;
+    padding: 7px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+}
+.downloadIcon{
+	line-height: 39px !important;
+}
+
+
+label.myLabel input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}
+
+/***** Example custom styling *****/
+.myLabel {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 2px;
+    background: white;
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+	cursor: pointer;
+}
+.myLabel :invalid + span {
+    color: #c0392b;
+}
+.myLabel :valid + span {
+    color: #4A4;
+}
+.uploadSection{
+	text-align: center;
+}
+.fontMargin{
+	margin-right: 7px;
+	font-size: 14px;
+}
+.upIcon{
+	margin-top: 10px;
+}
+.fileName{
+	width: 135px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+.floatR{
+	text-align: right;
+}
+.alert{
+	float: left;
+	width: 66%;
+}
+.docReady{
+	background: url(../img/shutterstock_133339211.jpg) no-repeat center center fixed;
+    height: 100%;
+    width: 100%;
+	position: fixed;
+}
+.albumsUl{
+	height: 150px;
+    overflow-y: auto;
+	list-style-type: decimal-leading-zero;
+}
+.md-content > div ul{
+	padding: 0 0 30px 40px !important;
+}
+.icon_left{
+	margin-left: 10px;
+}
+.explore,.deltFull,.deltImg,.downloadFull,.downloadImg{
+	cursor: pointer;
+}
+.actions{
+	float: right;
+	padding-right: 15px;
+}
+.albumArrow{
+	display: none;
+}
+.topHeightWidth{
+	height:100% !important;
+	width:100% !important;
+	max-width:100% !important;
+}
+.contentCustom{
+ padding: 15px 0px !important;
+}
+.customPosition{
+	position: fixed;
+    bottom: 35px;
+    right: 35px;
+}
+.imageContent{
+	max-height: 606px;
+    overflow-y: auto;
+}
+.gridUI li,
+.gridUIDownload li{
+	display: inline-block;
+	margin: 5px;
+}
+.gridUI img:first-child,
+.gridUIDownload img:first-child{
+	width:200px;
+	height:200px;
+	border:2px solid white;
+	border-radius: 9px;
+	list-style-type: none;
+	cursor: pointer;
+}
+.absolute{
+	position:absolute;
+}
+.check{
+    width: 100px;
+    height: 100px;
+    margin-left: -155px;
+    margin-bottom: 44px;
+	opacity: 0.9;
+	display: none;
+}
+.Dicon,.trashIcon{
+	width: 50px;
+    height: 50px;
+    margin-left: -190px;
+    margin-bottom: 145px;
+}
+.fontwidth{
+	width: 20px;
+}
+.noDisplay{
+	display: none;
+}
+li a img{
+	border: 0;
+    padding: 0;
+    margin: 0;
+	vertical-align: baseline;
+}
+a{
+	color: white;
+}
+.inputButton{
+	border: none;
+    padding: 0.6em 1.2em;
+    background: #c0392b;
+    color: #fff !important;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+}

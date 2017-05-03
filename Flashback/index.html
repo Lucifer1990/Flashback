@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashback</title>
+<link rel="shortcut icon" type="image/png" href="img/flashback.png"/>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- fancybox (Do Not Delete)-->
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<link rel="stylesheet" href="css/fancy.css" />
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<!-- for modal(Do Not Delete)-->
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<!-- Custom Fonts(Do Not Delete) -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- jquery.min.js (Do Not Delete)-->
+<script src="js/jquery-1.4.3.min.js"></script>
+<script type="text/java script">
+ 	var $= jquery.noConflict();
+</script>
+</head>
+
+<body>
+<header class="cd-header">
+	<img id="ham" src="img/ham.png"></img>
+	<div id="mainMenu">
+		<ul>
+			<a class="md-trigger" data-modal="modal-1" href="#"><li><i class="fa fa-plus fontwidth"></i>Add new album</li></a>
+			<a class="md-trigger" data-modal="modal-2" href="#"><li><i class="fa fa-plus fontwidth"></i>Add new image</li></a>
+			<a class="md-trigger exploreClick" data-modal="modal-3" href="#"><li><i class="fa fa-paper-plane fontwidth"></i>Explore all</li></a>
+			<a class="md-trigger downloadClick" data-modal="modal-5" href="#"><li><i class="fa fa-download fontwidth"></i>Download</li></a>
+			<a class="md-trigger deleteClick" data-modal="modal-6" href="#"><li><i class="fa fa-trash-o fontwidth"></i>Delete</li></a>
+		</ul>
+	</div>
+	<div class="search">
+		<input class="searchInput" id="autocomplete" placeholder="Search by album" type="text"/>
+		<div class="searchIcon"><img src="img/redSearch.png" width="19"/></div>
+	</div>
+		<nav class="cd-main-nav">
+			<ul>
+
+				<li><a href="#0">flashback</a></li>
+
+			</ul>
+		</nav>
+</header>
+<div id="gallery" class="docReady"></div>
+	<!-- MODAL DIV TO DELETE SPECIFIC IMAGE-->
+		<div class="md-modal md-effect-1 topHeightWidth" id="modal-4">
+			<div class="md-content topHeightWidth">
+				<h3>Click image to delete</h3>
+				<div class="topHeightWidth contentCustom">
+					<div class="imageContent">
+						<ul class="gridUI">
+							
+						</ul>
+					</div>
+					<span class="modalMsg"></span>
+					<div class="gap"></div>
+					<div class="buttons customPosition">
+					<input type="button" value="Close" class="inputButton"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- MODAL DIV TO DELETE SPECIFIC IMAGE-->
+		<div class="md-modal md-effect-1 topHeightWidth" id="modal-7">
+			<div class="md-content topHeightWidth">
+				<h3>Click image to download</h3>
+				<div class="topHeightWidth contentCustom">
+					<div class="imageContent">
+						<ul class="gridUIDownload">
+							
+						</ul>
+					</div>
+					<span class="modalMsg"></span>
+					<div class="gap"></div>
+					<div class="buttons customPosition">
+					<input type="button" value="Close" class="inputButton"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- MODAL DIV TO ADD ALBUM-->
+		<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content">
+				<h3>Add new album</h3>
+				<div>
+					<input class="albumName" type="text" placeholder="Album name">
+					<span class="modalMsg"></span>
+					<div class="gap"></div>
+					<div class="buttons">
+					<button class="md-close">Close</button>
+					<button id="createAlbum">Create album</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- MODAL DIV TO SHOW ALL ALBUMS-->
+		<div class="md-modal md-effect-1" id="modal-3">
+			<div class="md-content">
+				<h3>Full album list</h3>
+				<div>
+					<ul class="albumsUl">
+					</ul>
+					<div class="gap"></div>
+					<div class="buttons">
+					<button class="md-close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- MODAL DIV TO DOWNLOAD-->
+		<div class="md-modal md-effect-1" id="modal-5">
+			<div class="md-content">
+				<h3>Download</h3>
+				<div>
+					<ul class="albumsUl">
+					</ul>
+					<span class="modalMsg"></span>
+					<div class="gap"></div>
+					<div class="buttons">
+					<button class="md-close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- MODAL DIV TO DELETE-->
+		<div class="md-modal md-effect-1" id="modal-6">
+			<div class="md-content">
+				<h3>Delete</h3>
+				<div>
+					<ul class="albumsUl">
+					</ul>
+					<span class="modalMsg"></span>
+					<div class="gap"></div>
+					<div class="buttons">
+					<button class="md-close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<!-- MODAL DIV TO ADD IMAGE-->
+		<div class="md-modal md-effect-1" id="modal-2">
+			<div class="md-content">
+				<h3>Add image</h3>
+				<div>
+					<!--div class="downloadDiv"><i class="fa fa-upload downloadIcon"></i></div-->
+					<form id="formSubmit" action="php/uploadImage.php" method="post" enctype="multipart/form-data">
+					<div class="uploadSection">
+						<label title="Upload" class="myLabel">
+							<input type="file" id="upImage" name="fileToUpload" required/>
+							<span><i class="fa fa-upload upIcon"></i></span>
+						</label>
+						<div class="fileName"></div>
+					</div>
+					
+					
+					
+					<div class="gap"></div>
+					<select class="albumDropdown albums" name="val1">
+						<option>Select album</option>
+					</select>
+					<div class="gap"></div>
+					<select class="albumDropdown modes" name="val2">
+						<option>Select image view mode</option>
+						<option>Landscape</option>
+						<option>Portrait</option>
+					</select>
+					<div class="gap"></div>
+					<input class="albumName title" type="text" placeholder="Enter image title" name="val3">
+					<div class="gap"></div>
+					<span class="alert"></span>
+					<div class="floatR">
+						<button class="md-close">Cancel</button>
+						<button type="button" id="storeImage">Submit</button>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	<!--SHOW RESULT / VALIDATION-->
+	<div class="show"><span class="cross">X</span><span class="showInfo"></span></div>
+<div class="md-overlay"></div>
+		
+	
+<!-- perfectLayout.js for grid layout(Do Not Delete)-->
+<script src="js/perfectLayout.js"></script>
+<!-- script to handle http request (Do Not Delete)-->
+<script src="js/httpRequestHandler.js"></script>	
+<!--fancybox for gallery view(Do Not Delete)-->
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<!-- modal js(Do Not Delete)-->
+<script src="js/classie.js"></script>
+<script src="js/modalEffects.js"></script>
+<!--jquery UI(Do Not Delete)-->
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<!-- custom js (Modify here)-->
+<script src="js/script.js"></script>
+<!-- AjaxForm js (Do Not Delete)-->
+<script src="js/ajaxform.js"></script>
+<!-- for IE modal support(Do Not Delete)-->
+<script>
+	// this is important for IEs
+	var polyfilter_scriptpath = '/js/';
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
